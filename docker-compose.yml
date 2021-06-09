@@ -14,7 +14,7 @@ networks:
     networks:
       - intranet
   db:
-    image: mysql:5.1
+    image: mysql:5.7
     container_name: mysql
     restart: unless-stopped
     ports:
