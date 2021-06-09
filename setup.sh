@@ -15,4 +15,5 @@ sudo mkdir logs
 
 docker run --name "localhost" -d -e VIRTUAL_HOST=localhost --add-host="localhost:127.0.0.1" -p 80:80 -v /home/ubuntu/:/var/log/apache2 -v /home/ubuntu/SuiteCRM:/var/www/html --net intranet webserver
 
-docker start $(docker ps -a -q -f status=exited)
+docker start localhost
+docker start mysql
