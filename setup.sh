@@ -4,6 +4,8 @@ docker network create --driver bridge intranet
 docker build -t webserver . --rm
 
 docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7
+docker network connect intranet mysql
+
 cd /home/ubuntu
 git clone git@github.com:smallik123/SuiteCRM.git
 
